@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Glow</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f0e1; /* Tom de bege claro */
+            color: #333; /* Cinza escuro para o texto */
+        }
+
+        header {
+            background-color: #e0cba8; /* Tom de bege mais escuro */
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .hero {
+            background-color: #f8f3e7; /* Tom de bege ainda mais claro */
+            padding: 40px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            color: #5e5441; /* Marrom claro */
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: #776e65; /* Marrom mais escuro */
+            margin-bottom: 20px;
+        }
+
+        .hero button {
+            background-color: #a3916a; /* Tom de marrom médio */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .departments {
+            padding: 20px;
+            text-align: center;
+            background-color: #f0e8d9; /* Outro tom de bege claro */
+        }
+
+        .departments h2 {
+            color: #5e5441;
+            margin-bottom: 15px;
+        }
+
+        .departments ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .departments li {
+            color: #776e65;
+        }
+
+        .offers {
+            padding: 30px;
+            background-color: #f5f0e1;
+        }
+
+        .offers h2 {
+            text-align: center;
+            color: #5e5441;
+            margin-bottom: 20px;
+        }
+
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .discount {
+            background-color: #d4a373; /* Tom de laranja/marrom claro */
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .product-image {
+            max-width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .product-name {
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .product-price {
+            color: #5e5441;
+            font-size: 1.1em;
+        }
+
+        footer {
+            background-color: #e0cba8;
+            color: #333;
+            text-align: center;
+            padding: 15px;
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>Skin Glow</div>
+        <nav>
+            <ul>
+                <li><a href="#">Categorias</a></li>
+                <li><a href="#">Cuidados com a Pele</a></li>
+                <li><a href="#">Marcas</a></li>
+                <li><a href="#">Tratamentos</a></li>
+            </ul>
+        </nav>
+        <div>Entre ou cadastre-se</div>
+    </header>
+
+    <section class="hero">
+        <h1>CUIDE DA SUA PELE</h1>
+        <p>com os melhores produtos</p>
+        <button>até 30% OFF</button>
+        <button>Confira</button>
+        <img src="mulhertocandorosto.jpg" alt="Mulher tocando o rosto" style="max-width: 300px; margin-top: 20px;">
+    </section>
+
+    <section class="departments">
+        <h2>Departamentos</h2>
+        <ul>
+            <li>Hatratologo</li>
+            <li>Antradade</li>
+            <li>Proteção Solar</li>
+            <li>Limpeza</li>
+            <li>Limpeza</li>
+        </ul>
+    </section>
+
+    <section class="offers">
+        <h2>Ofertas do Dia</h2>
+        <div class="offers-grid">
+            <div class="product-card">
+                <div class="discount">10% OFF</div>
+                <img src="serumfacial.webp" alt="Serum Facial" class="product-image">
+                <div class="product-name">Serum Facial</div>
+                <div class="product-price">R$ 44,99</div>
+            </div>
+            <div class="product-card">
+                <div class="discount">10% OFF</div>
+                <img src="cremehidratante.PNG" alt="Creme Hidratante" class="product-image">
+                <div class="product-name">Creme Hidratante</div>
+                <div class="product-price">R$ 53,90</div>
+            </div>
+            <div class="product-card">
+                <div class="discount">10% OFF</div>
+                <img src="gelaloevera.webp" alt="Gel de Limpeza" class="product-image">
+                <div class="product-name">Gel de Limpeza</div>
+                <div class="product-price">R$ 45,90</div>
+            </div>
+            <div class="product-card">
+                <div class="discount">10% OFF</div>
+                <img src="tonico.PNG" alt="Tônico Facial" class="product-image">
+                <div class="product-name">Tônico Facial</div>
+                <div class="product-price">R$ 81,90</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        Departamentos
+    </footer>
+
+    <script>
+        // Simulação de carregamento de imagens (substitua pelas URLs reais)
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroImage = document.querySelector('.hero img');
+            if (heroImage) {
+                heroImage.src = 'https://via.placeholder.com/300/f8f3e7/5e5441?Text=Mulher%20Pele'; // Placeholder
+            }
+            const productImages = document.querySelectorAll('.product-image');
+            productImages.forEach((img, index) => {
+                let imageName = '';
+                switch (index) {
+                    case 0: serumfacial.webp = 'Serum Facial'; break;
+                    case 1: cremehidratante.PNG = 'Creme Hidratante'; break;
+                    case 2: gelaloevera.webp = 'Gel de Limpeza'; break;
+                    case 3: tonico.PNG = 'Tônico Facial'; break;
+                }
+                img.src = https://via.placeholder.com/100/fff/d4a373?Text=${imageName}; // Placeholder
+            });
+        });
+    </script>
+</body>
+</html>
