@@ -145,6 +145,25 @@
             font-size: 1.1em;
         }
 
+        .product-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.product-image {
+    max-width: 150px; /* Aumenta o tamanho para maior destaque */
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px; /* Bordas arredondadas para estética */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar */
+}
+
         footer {
             background-color: #e0cba8;
             color: #333;
@@ -175,7 +194,7 @@
         <p>com os melhores produtos</p>
         <button>até 30% OFF</button>
         <button>Confira</button>
-        <img src="mulhertocandorosto.jpg" alt="Mulher tocando o rosto" style="max-width: 300px; margin-top: 20px;">
+        <img src="mulhertocandorosto.jpg" alt="Mulher tocando o rosto" style="max-width: 300px; margin-top: 20px; display: block; margin-left: auto; margin-right: auto;">
     </section>
 
     <section class="departments">
@@ -216,32 +235,17 @@
                 <div class="product-name">Tônico Facial</div>
                 <div class="product-price">R$ 81,90</div>
             </div>
+            <div class="product-card">
+                <div class="discount">10% OFF</div>
+                <img src="oleofacialvitaminac.webp" alt="Sérum Hidratante" class="product-image">
+                <div class="product-name">Sérum Hidratante</div>
+                <div class="product-price">R$ 59,90</div>
+            </div>
+            <div class="product-card">
+                <div class="discount">10% OFF</div>
+                <img src="cremealoevera.PNG" alt="Creme Hidratante de Aloe Vera" class="product-image">
+                <div class="product-name">Creme Hidratante de Aloe Vera</div>
+                <div class="product-price">R$ 39,90</div>
+            </div>
         </div>
     </section>
-
-    <footer>
-        Departamentos
-    </footer>
-
-    <script>
-        // Simulação de carregamento de imagens (substitua pelas URLs reais)
-        document.addEventListener('DOMContentLoaded', function() {
-            const heroImage = document.querySelector('.hero img');
-            if (heroImage) {
-                heroImage.src = 'https://via.placeholder.com/300/f8f3e7/5e5441?Text=Mulher%20Pele'; // Placeholder
-            }
-            const productImages = document.querySelectorAll('.product-image');
-            productImages.forEach((img, index) => {
-                let imageName = '';
-                switch (index) {
-                    case 0: serumfacial.webp = 'Serum Facial'; break;
-                    case 1: cremehidratante.PNG = 'Creme Hidratante'; break;
-                    case 2: gelaloevera.webp = 'Gel de Limpeza'; break;
-                    case 3: tonico.PNG = 'Tônico Facial'; break;
-                }
-                img.src = https://via.placeholder.com/100/fff/d4a373?Text=${imageName}; // Placeholder
-            });
-        });
-    </script>
-</body>
-</html>
