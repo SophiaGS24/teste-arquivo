@@ -1,251 +1,166 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skin Glow</title>
+    <title>Skincare Brand</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f0e1; /* Tom de bege claro */
-            color: #333; /* Cinza escuro para o texto */
+            background-color: #F5EDE5;
+            font-family: Arial, sans-serif;
         }
-
-        header {
-            background-color: #e0cba8; /* Tom de bege mais escuro */
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-        }
-
-        nav li {
-            margin-right: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-
-        .hero {
-            background-color: #f8f3e7; /* Tom de bege ainda mais claro */
-            padding: 40px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 2.5em;
-            color: #5e5441; /* Marrom claro */
-            margin-bottom: 10px;
-        }
-
-        .hero p {
-            font-size: 1.2em;
-            color: #776e65; /* Marrom mais escuro */
-            margin-bottom: 20px;
-        }
-
-        .hero button {
-            background-color: #a3916a; /* Tom de marrom médio */
+        .btn {
+            background-color: #D2B48C;
             color: white;
-            border: none;
             padding: 10px 20px;
-            text-align: center;
+            border-radius: 20px;
             text-decoration: none;
-            display: inline-block;
-            font-size: 1em;
-            cursor: pointer;
-            border-radius: 5px;
         }
-
-        .departments {
-            padding: 20px;
-            text-align: center;
-            background-color: #f0e8d9; /* Outro tom de bege claro */
+        .btn:hover {
+            background-color: #C19A6B;
         }
-
-        .departments h2 {
-            color: #5e5441;
-            margin-bottom: 15px;
+        .slideshow-container {
+            position: relative;
+            max-width: 500px;
+            margin: auto;
+            overflow: hidden;
         }
-
-        .departments ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .slides {
             display: flex;
-            justify-content: center;
-            gap: 20px;
+            width: 300%;
+            animation: slide 9s infinite;
         }
-
-        .departments li {
-            color: #776e65;
-        }
-
-        .offers {
-            padding: 30px;
-            background-color: #f5f0e1;
-        }
-
-        .offers h2 {
-            text-align: center;
-            color: #5e5441;
-            margin-bottom: 20px;
-        }
-
-        .offers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .product-card {
-            background-color: #fff;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .discount {
-            background-color: #d4a373; /* Tom de laranja/marrom claro */
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 0.9em;
-            margin-bottom: 10px;
-            display: inline-block;
-        }
-
-        .product-image {
-            max-width: 100px;
-            height: auto;
-            margin-bottom: 10px;
-        }
-
-        .product-name {
-            color: #333;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .product-price {
-            color: #5e5441;
-            font-size: 1.1em;
-        }
-
-        .product-card {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza o conteúdo horizontalmente */
-}
-
-.product-image {
-    max-width: 150px; /* Aumenta o tamanho para maior destaque */
-    height: auto;
-    margin-bottom: 10px;
-    border-radius: 10px; /* Bordas arredondadas para estética */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar */
-}
-
-        footer {
-            background-color: #e0cba8;
-            color: #333;
-            text-align: center;
-            padding: 15px;
-            position: sticky;
-            bottom: 0;
+        .slides img {
             width: 100%;
+            height: auto;
+        }
+        .product-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            33% { transform: translateX(-100%); }
+            66% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+        /* Estilo para o menu de categorias */
+        .categories-menu a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #4B3621;
+        }
+        .categories-menu a:hover {
+            color: #C19A6B;
         }
     </style>
 </head>
-<body>
-    <header>
-        <div>Skin Glow</div>
-        <nav>
-            <ul>
-                <li><a href="#">Categorias</a></li>
-                <li><a href="#">Cuidados com a Pele</a></li>
-                <li><a href="#">Marcas</a></li>
-                <li><a href="#">Tratamentos</a></li>
-            </ul>
+<body class="text-gray-800">
+    <!-- Header -->
+    <header class="flex justify-between items-center p-4">
+        <div class="text-2xl font-bold">SKIN GLOW</div>
+        <!-- Adicionando menu de categorias -->
+        <nav class="categories-menu">
+            <a href="#hidratantes">Hidratantes</a>
+            <a href="#limpeza">Limpeza</a>
+            <a href="#seruns">Séruns</a>
+            <a href="#tonicos">Tônicos</a>
         </nav>
-        <a href="./login.html">Entre ou cadastre-se</a>
+        <div class="flex items-center">
+            <!-- Adicionando link "Entre ou cadastre-se" -->
+            <a href="./login.html" class="mr-4 text-amber-800 hover:text-amber-600">Entre ou cadastre-se</a>
+            <span class="mr-4"> : </span>
+            <span>🛒</span>
+        </div>
     </header>
 
-    <section class="hero">
-        <h1>CUIDE DA SUA PELE</h1>
-        <p>com os melhores produtos</p>
-        <button>até 30% OFF</button>
-        <button>Confira</button>
-        <img src="mulhertocandorosto.jpg" alt="Mulher tocando o rosto" style="max-width: 300px; margin-top: 20px; display: block; margin-left: auto; margin-right: auto;">
-    </section>
-
-    <section class="departments">
-        <h2>Departamentos</h2>
-        <ul>
-            <li>Hatratologo</li>
-            <li>Antradade</li>
-            <li>Proteção Solar</li>
-            <li>Limpeza</li>
-            <li>Limpeza</li>
-        </ul>
-    </section>
-
-    <section class="offers">
-        <h2>Ofertas do Dia</h2>
-        <div class="offers-grid">
-            <div class="product-card">
-                <div class="discount">10% OFF</div>
-                <img src="serumfacial.webp" alt="Serum Facial" class="product-image">
-                <div class="product-name">Serum Facial</div>
-                <div class="product-price">R$ 44,99</div>
+    <!-- Hero Section -->
+    <section class="flex flex-col md:flex-row items-center p-8">
+        <div class="md:w-1/2">
+            <h1 class="text-4xl font-bold mb-4 text-amber-800">Sua pele merece o melhor cuidado.</h1>
+            <a href="#products" class="btn inline-block mb-4">Conheça nossos produtos</a>
+            <!-- Slideshow -->
+            <div class="slideshow-container">
+                <div class="slides">
+                    <img src="cremehidratante.PNG" alt="Creme Hidratante">
+                    <img src="aloeveracreme.jpg" alt="Gel Aloe Vera">
+                    <img src="serumfacial.webp" alt="Tônico Facial">
+                </div>
             </div>
-            <div class="product-card">
-                <div class="discount">10% OFF</div>
-                <img src="cremehidratante.PNG" alt="Creme Hidratante" class="product-image">
-                <div class="product-name">Creme Hidratante</div>
-                <div class="product-price">R$ 53,90</div>
-            </div>
-            <div class="product-card">
-                <div class="discount">10% OFF</div>
-                <img src="gelaloevera.webp" alt="Gel de Limpeza" class="product-image">
-                <div class="product-name">Gel de Limpeza</div>
-                <div class="product-price">R$ 45,90</div>
-            </div>
-            <div class="product-card">
-                <div class="discount">10% OFF</div>
-                <img src="tonico.PNG" alt="Tônico Facial" class="product-image">
-                <div class="product-name">Tônico Facial</div>
-                <div class="product-price">R$ 81,90</div>
-            </div>
-            <div class="product-card">
-                <div class="discount">10% OFF</div>
-                <img src="oleofacialvitaminac.webp" alt="Sérum Hidratante" class="product-image">
-                <div class="product-name">Sérum Hidratante</div>
-                <div class="product-price">R$ 59,90</div>
-            </div>
-            <div class="product-card">
-                <div class="discount">10% OFF</div>
-                <img src="cremealoevera.PNG" alt="Creme Hidratante de Aloe Vera" class="product-image">
-                <div class="product-name">Creme Hidratante de Aloe Vera</div>
-                <div class="product-price">R$ 39,90</div>
+        </div>
+        <div class="md:w-1/2">
+            <div class="w-full h-100 bg-gray-800 flex items-center justify-center">
+                <img src="img4.jpeg" alt="Skin GLOW" class="product-img">
             </div>
         </div>
     </section>
+
+    <!-- Products Section -->
+    <section id="products" class="p-8">
+        <h2 class="text-3xl font-bold text-center mb-8">Principais Produtos</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="text-center">
+                <div class="w-full h-48 bg-gray-200 flex items-center justify-center mb-4">
+                    <img src="serumfacial.webp" alt="Sérum Facial" class="product-img">
+                </div>
+                <h3 class="text-lg font-semibold">Sérum Facial</h3>
+                <p>R$ 65,00</p>
+                <a href="#" class="btn inline-block mt-2">Comprar</a>
+            </div>
+            <div class="text-center">
+                <div class="w-full h-48 bg-gray-200 flex items-center justify-center mb-4">
+                    <img src="cremehidratante.PNG" alt="Creme Hidratante" class="product-img">
+                </div>
+                <h3 class="text-lg font-semibold">Creme Hidratante</h3>
+                <p>R$ 60,00 </p>
+                <a href="#" class="btn inline-block mt-2">Comprar</a>
+            </div>
+            <div class="text-center">
+                <div class="w-full h-48 bg-gray-200 flex items-center justify-center mb-4">
+                    <img src="tonico.PNG" alt="Tônico Facial" class="product-img">
+                </div>
+                <h3 class="text-lg font-semibold">Tônico Facial</h3>
+                <p>R$ 18,00</p>
+                <a href="#" class="btn inline-block mt-2">Comprar</a>
+            </div>
+            <div class="text-center">
+                <div class="w-full h-48 bg-gray-200 flex items-center justify-center mb-4">
+                    <img src="aloeveracreme.jpg" alt="Gel de Limpeza" class="product-img">
+                </div>
+                <h3 class="text-lg font-semibold">Gel de Limpeza</h3>
+                <p>R$ 45,00 </p>
+                <a href="#" class="btn inline-block mt-2">Comprar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About the Brand Section -->
+    <section class="flex flex-col md:flex-row items-center p-8">
+        <div class="md:w-1/2">
+            <div class="w-full h-64 bg-gray-200 flex items-center justify-center">Imagem Sobre a Marca</div>
+        </div>
+        <div class="md:w-1/2 md:pl-8 mt-4 md:mt-0">
+            <h2 class="text-3xl font-bold mb-4">Sobre a Marca</h2>
+            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat nunc risus eu urna. Aenean visus.</p>
+            <a href="#" class="btn inline-block">Bio +</a>
+        </div>
+    </section>
+
+    <!-- Beauty Tips Section -->
+    <section class="p-8">
+        <h2 class="text-3xl font-bold text-center mb-8">Dicas de Beleza</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="text-center">
+                <div class="w-full h-48 bg-gray-200 flex items-center justify-center mb-4">Imagem Dicas</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-full h-48 bg-gray-200 flex items-center justify-center mb-4">Imagem Dicas</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
